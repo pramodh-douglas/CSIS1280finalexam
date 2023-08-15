@@ -62,8 +62,12 @@ function checkTime(i) {
 // function to switch the clock format
 function switchClockFormat() {
     if(currClockFormat === 12) {
+        document.getElementById("clockgrid").classList.remove('grid--4-col');
+        document.getElementById("clockgrid").classList.add('grid--3-col');
         currClockFormat = 24;
     } else {
+        document.getElementById("clockgrid").classList.add('grid--4-col');
+        document.getElementById("clockgrid").classList.remove('grid--3-col');
         currClockFormat = 12;
     }
     startTime()
